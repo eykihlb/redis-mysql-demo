@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.94.57.213:3306/citymanagement
+    username: admin
+    password: 123.com
+    initial-size: 1
+    max-active: 50
+    max-wait: 60000
+    min-idle: 5
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    validation-query: SELECT * FROM DUAL
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    max-open-prepared-statements: 20
+    remove-abandoned: true
+    remove-abandoned-timeout: 1800
+    log-abandoned: true
+    type: com.alibaba.druid.pool.DruidDataSource
+  #redis配置
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    # 连接超时时间 单位 ms（毫秒）
+    timeout: 3000
+    max-idle: 200
+    max-active: 2000
+    max-wait: 1000
