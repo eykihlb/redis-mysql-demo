@@ -1,4 +1,4 @@
-package com.example.redisdemo.config;
+package com.example.redisdemo.controller;
 
 import com.example.redisdemo.dao.UserMapper;
 import com.example.redisdemo.service.UserService;
@@ -23,7 +23,6 @@ public class UserController {
     @Autowired
     private UserService userService;
     ObjectMapper om = new ObjectMapper();
-    @GetMapping("/getByUserId")
     public String getByUserId(@RequestParam Long id) throws Exception{
         return om.writeValueAsString(userService.selectByPrimaryKey(id));
     }
